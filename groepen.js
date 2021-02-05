@@ -1,13 +1,12 @@
-const groepV1 = () => {
+const groepV1 = (datum) => {
     console.log("************************************** GroepenV1 **************************************")
-    let datum = 20201010
     console.log("Geef je geboortedatum in (JJJJMMDD): " + datum);
-    let groep = datum%7;
+    let groep = datum%7+1;
     console.log("Je bent toegewezen aan groep " + groep);
     console.log("***************************************************************************************")
 }
 
-groepV1();
+groepV1(20201010);
 
 
 const groepV2 = () => {
@@ -19,7 +18,7 @@ const groepV2 = () => {
 
     r_datum.question("Geef je geboortedatum in (JJJJMMDD): ", function(gbDatum) {
         console.log("************************************** GroepenV2 **************************************")
-        let groep = gbDatum%7;
+        let groep = gbDatum%7+1;
         console.log("Je bent toegewezen aan groep " + groep);
         console.log("***************************************************************************************")
         r_datum.close();
