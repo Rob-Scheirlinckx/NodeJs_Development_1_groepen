@@ -7,20 +7,23 @@ const groepV1 = () => {
     console.log("***************************************************************************************")
 }
 
-
-
 groepV1();
 
-const readline = require("readline");
+
+const groepV2 = () => {
+    const readline = require("readline");
     const r_datum = readline.createInterface({
         input: process.stdin,
         output: process.stdout
     });
 
-r_datum.question("Geef je geboortedatum in (JJJJMMDD): ", function(gbDatum) {
-    console.log("************************************** GroepenV2 **************************************")
-    let groep = gbDatum%7;
-    console.log("Je bent toegewezen aan groep " + groep);
-    console.log("***************************************************************************************")
-    r_datum.close();
-})
+    r_datum.question("Geef je geboortedatum in (JJJJMMDD): ", function(gbDatum) {
+        console.log("************************************** GroepenV2 **************************************")
+        let groep = gbDatum%7;
+        console.log("Je bent toegewezen aan groep " + groep);
+        console.log("***************************************************************************************")
+        r_datum.close();
+    })
+}
+
+groepV2();
